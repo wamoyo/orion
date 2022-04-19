@@ -6,7 +6,7 @@
 @font-face {
   font-family: 'meteoric';
   src: url('../fonts/meteoric-light.woff2') format('woff2'),
-      url('../fonts/meteoric-light.woff') format('woff');
+       url('../fonts/meteoric-light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'open sans', sans-serif;
+  font-family: 'meteoric', 'open sans', sans-serif;
   font-weight: 200;
   margin: 0 auto;
   padding: 0;
