@@ -11,7 +11,9 @@
   font-style: normal;
 }
 
-html {background: url('../images/space.jpg');}
+html {
+  background: url('../images/space.jpg');
+}
 
 body {
   font-family: 'open sans', sans-serif;
@@ -19,28 +21,27 @@ body {
   margin: 0 auto;
   padding: 0;
   min-width: 320px;
-  background: no-repeat left top url('../images/banner.png');
-  background-size: 100% auto;
   color: white;
   opacity: 1;
   transition: .5s;
 }
 
-body.fadetwo {
+div#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 400%; /* Ugh, that's hacky */
+  background: no-repeat left top url('../images/banner.png');
+  background-size: 100% auto;
+  opacity: 1;
+  transition: .75s
+}
+
+div#bg.hidden {
   opacity: 0;
 }
 
-.fadetwo {
-  animation: fadetwo 2.5s;
-  animation-fill-mode: forwards;
-  transition: .75s;
-}
-
-@keyframes fadetwo {
-  0% { opacity: 0; }
-  20% { opacity: 0; }
-  100% { opacity: 1; }
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'meteoric';
