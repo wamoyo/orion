@@ -22,7 +22,24 @@ body {
   background: no-repeat left top url('../images/banner.png');
   background-size: 100% auto;
   color: white;
+  opacity: 1;
   transition: .5s;
+}
+
+body.fadetwo {
+  opacity: 0;
+}
+
+.fadetwo {
+  animation: fadetwo 2.5s;
+  animation-fill-mode: forwards;
+  transition: .75s;
+}
+
+@keyframes fadetwo {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 h1, h2, h3, h4, h5, h6 {
