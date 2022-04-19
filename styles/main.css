@@ -35,7 +35,7 @@ div#bg {
   background: no-repeat left top url('../images/banner.png');
   background-size: 100% auto;
   opacity: 1;
-  transition: .75s
+  transition: 3s;
 }
 
 div#bg.hidden {
