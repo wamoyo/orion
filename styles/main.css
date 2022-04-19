@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'meteoric';
-  src url('../fonts/meteoric-light.woff2') format('woff2'),
+  src: url('../fonts/meteoric-light.woff2') format('woff2'),
       url('../fonts/meteoric-light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
