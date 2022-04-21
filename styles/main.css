@@ -28,9 +28,10 @@ body {
 
 div#bg {
   position: absolute;
-  top: 0;
+  top: 3.5em;
   left: 0;
   right: 0;
+  z-index: -1;
   min-height: 400%; /* Ugh, that's hacky */
   background: no-repeat left top url('../images/banner.png');
   background-size: 100% auto;
@@ -41,7 +42,6 @@ div#bg {
 div#bg.hidden {
   opacity: 0;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'meteoric';
@@ -69,6 +69,106 @@ a:hover {
   border-color: #777;
 }
 
+#nav {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 3;
+  padding: 1em;
+  text-align: right;
+  max-width: 1157px;
+  -webkit-backface-visibility: hidden;
+}
+
+#nav a {
+  margin: 0 1em;
+}
+
+#nav #check {
+  display: none;
+}
+
+#nav label.nav {
+  display: inline-block;
+  opacity: 1;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5em;
+  transform: rotate(90deg);
+  transition: .5s;
+}
+
+#nav #check ~ span#x {
+  position: relative;
+  left: 1em;
+  opacity: 0;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5em;
+  transform: rotate(90deg);
+  transition: .5s;
+}
+
+#nav nav {
+  background: black;
+  height: 0px;
+  padding: 0;
+  transform-origin: top right;
+  transform: scale(0);
+  transition: .5s;
+}
+
+#nav nav a {
+  display: block;
+  font-size: 1.2em;
+  transform-origin: center right;
+  transform: scale(0);
+  color: black;
+  border: none;
+}
+
+#nav #check:checked ~ label.nav {
+  transform: rotate(0deg);
+  opacity: 0;
+}
+
+#nav #check:checked ~ nav {
+  background: white;
+  height: 205px;
+  transform: scale(1);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+#nav #check:checked ~ span#x {
+  opacity: 1;
+}
+
+#nav #check:checked ~ nav a {
+  transform: scale(1);
+  margin: .5em
+}
+
+
+/* TODO Continue Here */
+
+@media all and (min-width: 960px) {
+  #nav nav {
+    display: block;
+    height: 100px;
+    background: transparent;
+  }
+  #nav nav a {
+    transform: scale(1);
+  }
+}
+
+
+
+/* Banner */
+
 #banner {
   position: relative;
   height: 100vh;
@@ -79,7 +179,7 @@ a:hover {
 
 #banner h1.headline {
   position: absolute;
-  top: 240px;
+  top: 310px;
   right: 20px;
   text-align: right;
 }
@@ -108,42 +208,42 @@ a:hover {
 }
 
 @media all and (min-width: 640px) {
-  #banner h1.headline {top: 260px; right: 50px;}
+  #banner h1.headline {top: 320px; right: 50px;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em;}
   #banner p.rise {text-align: right; padding-right: 3em; font-size: 1.75em;}
 }
 
 @media all and (min-width: 800px) {
-  #banner h1.headline {top: 50vh;}
+  #banner h1.headline {top: 53vh;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em;}
   #banner p.rise {bottom: 15vh; padding-right: 7em; font-size: 1.75em;}
 }
 
 @media all and (min-width: 940px) {
-  #banner h1.headline {top: 90px; left: 15vw; right: inherit; text-align: left;}
+  #banner h1.headline {top: 120px; left: 15vw; right: inherit; text-align: left;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em; margin-left: 3.5em;}
   #banner p.rise {bottom: 15vh; padding-right: 7em; font-size: 1.75em;}
 }
 
 @media all and (min-width: 1600px) {
-  #banner h1.headline {left: 175px;}
+  #banner h1.headline {top: 200px; left: 175px;}
   #banner span.orion {font-size: 3.5em;}
   #banner span.space-elevator {font-size: 1.7em;}
   #banner p.rise {font-size: 2.25em;}
 }
 
 @media all and (min-width: 2200px) {
-  #banner h1.headline {left: 275px;}
+  #banner h1.headline {top: 250px; left: 275px;}
   #banner span.orion {font-size: 5em;}
   #banner span.space-elevator {font-size: 2.7em;}
   #banner p.rise {font-size: 3em;}
 }
 
 @media all and (min-width: 2900px) {
-  #banner h1.headline {left: 375px;}
+  #banner h1.headline {top: 300px; left: 375px;}
   #banner span.orion {font-size: 7em;}
   #banner span.space-elevator {font-size: 3.5em;}
   #banner p.rise {font-size: 3.75em;}
@@ -167,6 +267,7 @@ a:hover {
 
 #video video {
   max-width: 100%;
+  transition: .5s;
 }
 
 @media all and (min-width: 640px) {
