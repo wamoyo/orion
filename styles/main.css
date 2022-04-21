@@ -32,7 +32,7 @@ div#bg {
   left: 0;
   right: 0;
   z-index: -1;
-  min-height: 400%; /* Ugh, that's hacky */
+  min-height: 190%; /* Ugh, that's hacky */
   background: no-repeat left top url('../images/banner.png');
   background-size: 100% auto;
   opacity: 1;
@@ -151,17 +151,26 @@ a:hover {
   margin: .5em
 }
 
-
-/* TODO Continue Here */
-
-@media all and (min-width: 960px) {
+@media all and (min-width: 1080px) {
+  #nav span#x,
+  #nav label.nav,
+  #nav #check {
+    display: none;
+  }
   #nav nav {
-    display: block;
-    height: 100px;
+    height: 60px;
+    transform: scale(1);
     background: transparent;
   }
   #nav nav a {
+    display: inline-block;
+    color: white;
     transform: scale(1);
+    border-bottom: 1px solid #000;
+  }
+  #nav nav a:hover {
+    color: #777;
+    border-bottom: 1px solid #777;
   }
 }
 
@@ -222,7 +231,7 @@ a:hover {
 }
 
 @media all and (min-width: 940px) {
-  #banner h1.headline {top: 120px; left: 15vw; right: inherit; text-align: left;}
+  #banner h1.headline {top: 180px; left: 15vw; right: inherit; text-align: left;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em; margin-left: 3.5em;}
   #banner p.rise {bottom: 15vh; padding-right: 7em; font-size: 1.75em;}
@@ -602,5 +611,40 @@ a:hover {
 
 @media all and (min-width: 2200px) {
   #footer {font-size:2em;}
+}
+
+
+
+
+/* Page Layout */
+
+#page {
+  box-sizing: border-box;
+  width: 857px;
+  max-width: calc(100% - 2em);
+  margin: 8em auto;
+  padding: 1em;
+  background: #e7e7e7;
+  color: #000;
+  border-radius: 1em;
+}
+
+#page h1 {
+  text-align: center;
+}
+
+#page h1,
+#page h2,
+#page h3,
+#page h4,
+#page h5,
+#page h6 {
+  box-sizing: border-box;
+  margin: 8px 0;
+}
+
+#page p {
+  box-sizing: border-box;
+  margin: 1em 0;
 }
 
