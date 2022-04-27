@@ -158,9 +158,9 @@ a:hover {
     display: none;
   }
   #nav nav {
-    height: 60px;
+    height: 60px !important;
     transform: scale(1);
-    background: transparent;
+    background: transparent !important;
   }
   #nav nav a {
     display: inline-block;
@@ -618,7 +618,7 @@ a:hover {
 
 /* Page Layout */
 
-#page {
+section.page {
   box-sizing: border-box;
   width: 857px;
   max-width: calc(100% - 2em);
@@ -629,22 +629,40 @@ a:hover {
   border-radius: 1em;
 }
 
-#page h1 {
+section.page h1 {
   text-align: center;
 }
 
-#page h1,
-#page h2,
-#page h3,
-#page h4,
-#page h5,
-#page h6 {
+section.page h1,
+section.page h2,
+section.page h3,
+section.page h4,
+section.page h5,
+section.page h6 {
   box-sizing: border-box;
   margin: 8px 0;
 }
 
-#page p {
+section.page p {
   box-sizing: border-box;
   margin: 1em 0;
+}
+
+section.page a {
+  color: #000;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+}
+
+section.page a:hover {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+section.page img.center {
+  display: block;
+  margin: auto;
+  max-width: 711px;
+  width: 100%;
+  border-radius: 1em;
 }
 
