@@ -28,13 +28,13 @@ body {
 
 div#bg {
   position: absolute;
-  top: 3.5em;
+  top: 0;
   left: 0;
   right: 0;
   z-index: -1;
-  min-height: 190%; /* Ugh, that's hacky */
-  background: no-repeat left top url('../images/banner.png');
-  background-size: 100% auto;
+  min-height: 100%; /* Ugh, that's hacky */
+  background: no-repeat center top url('../images/rise.png');
+  background-size: cover;
   opacity: 1;
   transition: 3s;
 }
@@ -176,6 +176,18 @@ a:hover {
   }
 }
 
+@media all and (min-width: 1400px) {
+  #nav nav a {font-size:1.5em;}
+}
+@media all and (min-width: 1800px) {
+  #nav {max-width: 1957px;}
+  #nav nav a {font-size:1.8em;}
+}
+@media all and (min-width: 2200px) {
+  #nav nav a {font-size:2.25em;}
+  #nav nav a {font-size:2.25em;}
+}
+
 
 
 /* Banner */
@@ -209,7 +221,7 @@ a:hover {
 #banner p.rise {
   box-sizing: border-box;
   position: absolute;
-  bottom: 20vh;
+  bottom: 8vh;
   width: 100%;
   margin: auto;
   text-align: center;
@@ -219,42 +231,41 @@ a:hover {
 }
 
 @media all and (min-width: 640px) {
-  #banner h1.headline {top: 320px; right: 50px;}
+  #banner h1.headline {top: 290px; right: 30px;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em;}
-  #banner p.rise {text-align: right; padding-right: 3em; font-size: 1.75em;}
+  #banner p.rise {bottom: 5vh; text-align: left; padding-left: 5%; font-size: 1.75em;}
 }
 
 @media all and (min-width: 800px) {
-  #banner h1.headline {top: 53vh;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em;}
-  #banner p.rise {bottom: 15vh; padding-right: 7em; font-size: 1.75em;}
+  #banner p.rise {bottom: 15vh; font-size: 1.75em;}
 }
 
 @media all and (min-width: 940px) {
-  #banner h1.headline {top: 180px; left: 15vw; right: inherit; text-align: left;}
+  #banner h1.headline {font-size: 1.75em;}
   #banner span.orion {font-size: 2.5em;}
   #banner span.space-elevator {font-size: 1.3em; margin-left: 3.5em;}
   #banner p.rise {bottom: 15vh; padding-right: 7em; font-size: 1.75em;}
 }
 
 @media all and (min-width: 1600px) {
-  #banner h1.headline {top: 200px; left: 175px;}
+  #banner h1.headline {top: 350px; left: 175px; font-size: 2.25em;}
   #banner span.orion {font-size: 3.5em;}
   #banner span.space-elevator {font-size: 1.7em;}
   #banner p.rise {font-size: 2.25em;}
 }
 
 @media all and (min-width: 2200px) {
-  #banner h1.headline {top: 250px; left: 275px;}
+  #banner h1.headline {top: 500px; left: 275px;}
   #banner span.orion {font-size: 5em;}
   #banner span.space-elevator {font-size: 2.7em;}
   #banner p.rise {font-size: 3em;}
 }
 
 @media all and (min-width: 2900px) {
-  #banner h1.headline {top: 300px; left: 375px;}
+  #banner h1.headline {top: 1200px; left: 375px; margin-right: 250px;}
   #banner span.orion {font-size: 7em;}
   #banner span.space-elevator {font-size: 3.5em;}
   #banner p.rise {font-size: 3.75em;}
@@ -268,6 +279,7 @@ a:hover {
 
 #video {
   position: relative;
+  top: 4em;
   padding-bottom: 5em;
 }
 
@@ -296,12 +308,6 @@ a:hover {
 
 @media all and (min-width: 800px) {
   #video {margin-top: 10em;}
-}
-@media all and (min-width: 960px) {
-  #video {margin-top: 18em;}
-}
-@media all and (min-width: 1100px) {
-  #video {margin-top: 28em;}
 }
 
 #video div.video-container p.video-caption {
