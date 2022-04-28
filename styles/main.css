@@ -69,6 +69,28 @@ a:hover {
   border-color: #777;
 }
 
+div.logo {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+}
+
+div.logo img {
+  width: 100%;
+  filter: drop-shadow(1px 1px 2px #000);
+}
+
+div.logo a {
+  border: 0;
+}
+div.logo a:hover {
+  border: 0;
+}
+
 #nav {
   position: absolute;
   top: 5px;
@@ -152,29 +174,29 @@ a:hover {
   margin: .5em
 }
 
-@media all and (min-width: 1080px) {
-  #nav span#x,
-  #nav label.nav,
-  #nav #check {
-    display: none;
-  }
-  #nav nav {
-    height: 60px !important;
-    box-shadow: none !important;
-    transform: scale(1);
-    background: transparent !important;
-  }
-  #nav nav a {
-    display: inline-block;
-    color: white;
-    transform: scale(1);
-    border-bottom: 1px solid #000;
-  }
-  #nav nav a:hover {
-    color: #777;
-    border-bottom: 1px solid #777;
-  }
-}
+/* @media all and (min-width: 1080px) { */
+/*   #nav span#x, */
+/*   #nav label.nav, */
+/*   #nav #check { */
+/*     display: none; */
+/*   } */
+/*   #nav nav { */
+/*     height: 60px !important; */
+/*     box-shadow: none !important; */
+/*     transform: scale(1); */
+/*     background: transparent !important; */
+/*   } */
+/*   #nav nav a { */
+/*     display: inline-block; */
+/*     color: white; */
+/*     transform: scale(1); */
+/*     border-bottom: 1px solid #000; */
+/*   } */
+/*   #nav nav a:hover { */
+/*     color: #777; */
+/*     border-bottom: 1px solid #777; */
+/*   } */
+/* } */
 
 @media all and (min-width: 1400px) {
   #nav nav a {font-size:1.5em;}
@@ -207,6 +229,10 @@ a:hover {
   text-align: right;
 }
 
+#banner span.the {
+  position: relative;
+  top: 25px;
+}
 #banner span.orion {
   display: block;
   font-size: 2em;
