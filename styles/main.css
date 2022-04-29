@@ -100,19 +100,14 @@ div#rise {
 header#site-header {
   position: relative;
   max-width: 1100px;
-  margin: .75rem;
-}
-
-@media all and (min-width: 1125px) {
-  header#site-header {
-    margin: .75rem auto;
-  }
+  margin: auto;
+  padding: .75rem;
 }
 
 div.logo {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 10px;
+  left: 15px;
   z-index: 3;
 }
 
@@ -134,8 +129,8 @@ div.logo a:hover {
 
 #nav {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 15px;
   z-index: 2;
   padding: 1em;
   text-align: right;
@@ -247,6 +242,7 @@ section#banner {
   position: relative;
   height: 100vh;
   text-align: right;
+  z-index: 1;
 }
 
 h1.headline {
