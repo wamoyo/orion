@@ -1,6 +1,50 @@
 
+/* some normalizing first...
+ * CSS Reset + Normalize
+ * Author: Kim Maida
+ * Author URI: <http://kim-maida.com>
+ * Source: <https://github.com/kmaida
+ * License: GNU Public License
+*/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, input, select, button, textarea, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; border: 0; border-radius: 0; font-weight: inherit; font-style: inherit; font-family: inherit; line-height: 1; text-decoration: none; vertical-align: baseline; }
+html { overflow-y: scroll; -webkit-text-size-adjust: 100%; }
+ol, ul { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+sup, sub { line-height: 1; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+input, textarea { -webkit-appearance: none; }
+*,*:before,*:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+i, em { font-style: italic; }
+b, strong { font-weight: bold; }
+q:lang(en) { quotes: '&#8220;' '&#8221;' '&#8216;' '&#8217;'; }
+h1, h2, h3, h4, h5, h6, p { margin-bottom: 15px; }
+ul { list-style: outside disc; padding-left: 24px; }
+ol { list-style: outside decimal; padding-left: 24px; }
+a, label, input[type=button], input[type=submit], button { cursor: pointer; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+pre,code { background: #eee; border: 1px solid #ccc; font-family: Consolas, 'Lucida Console', 'Courier New', serif; padding: 2%; }
+input, select, textarea { border: 1px solid #ccc; font-family: inherit; font-size: inherit; padding: 3px 6px; }
+input, select { vertical-align: middle; }
+textarea { overflow: auto; } /* prevents scrollbar from showing up when unneeded in IE */
+
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.ie7 .clearfix { zoom: 1; }
+
+.ir { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+
+.touch p a { margin: 0 -.5em; padding: 0 .5em; }
+
+
+
 /*
- * Styles for Orion Space Elevator
+ * The Space Elevator website styles
  */
 
 @font-face {
@@ -12,79 +56,76 @@
 }
 
 html {
-  background: url('../images/space.jpg');
+  min-width: 320px;
+  min-height: 100%;
+  background: #fff;
 }
 
 body {
-  font-family: 'meteoric', 'open sans', sans-serif;
-  font-weight: 200;
+  position: relative;
   margin: 0 auto;
-  padding: 0;
-  min-width: 320px;
-  color: white;
-  opacity: 1;
-  transition: .5s;
+  background: url('../images/space.jpg');
+  min-height: 100%;
+  max-width: 2000px;
+  font-family: 'meteoric', sans-serif;
 }
 
-div#bg {
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2.25em; }
+h4 { font-size: 2em; }
+h5 { font-size: 1.75em; }
+h6 { font-size: 1.5em; }
+
+div#rise.hidden { opacity: 0; top: 100px; }
+div#rise {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  min-height: 100%; /* Ugh, that's hacky */
-  background: no-repeat center top url('../images/rise.png');
-  background-size: cover;
+  z-index: 1;
+  background: url('../images/rise.png') 25% top / cover no-repeat;
+  width: 100%;
+  height: 100%;
   opacity: 1;
   transition: 3s;
 }
 
-div#bg.hidden {
-  opacity: 0;
+
+
+/* Header - Logo and Navigation */
+
+header#site-header {
+  position: relative;
+  max-width: 1100px;
+  margin: .75rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'meteoric';
-  margin: 0;
-  transition: .5s;
-}
-
-p {
-  margin: 0;
-  transition: .5s;
-  line-height: 1.1;
-}
-
-a {
-  color: white;
-  font-weight: bold;
-  font-family: 'meteoric';
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-  transition: .5s;
-}
-
-a:hover {
-  color: #777;
-  border-color: #777;
+@media all and (min-width: 1125px) {
+  header#site-header {
+    margin: .75rem auto;
+  }
 }
 
 div.logo {
   position: absolute;
   top: 5px;
   left: 5px;
-  z-index: 2;
-  width: 60px;
-  height: 60px;
-  max-width: 60px;
+  z-index: 3;
 }
 
 div.logo img {
   width: 100%;
-  filter: drop-shadow(1px 1px 2px #000);
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  filter: drop-shadow(-1px 1px 2px #000);
 }
 
 div.logo a {
+  display: block;
   border: 0;
 }
 div.logo a:hover {
@@ -95,7 +136,7 @@ div.logo a:hover {
   position: absolute;
   top: 5px;
   right: 5px;
-  z-index: 3;
+  z-index: 2;
   padding: 1em;
   text-align: right;
   max-width: 1157px;
@@ -158,8 +199,8 @@ div.logo a:hover {
 
 #nav #check:checked ~ nav {
   background: white;
-  box-shadow: 0 0 3px #a7a7a7;
-  height: 165px;
+  box-shadow: 0 0 4px 2px black;
+  height: 185px;
   transform: scale(1);
   border-radius: 1em;
   padding: 1em;
@@ -198,534 +239,56 @@ div.logo a:hover {
 /*   } */
 /* } */
 
-@media all and (min-width: 1400px) {
-  #nav nav a {font-size:1.5em;}
-}
-@media all and (min-width: 1800px) {
-  #nav {max-width: 1957px;}
-  #nav nav a {font-size:1.8em;}
-}
-@media all and (min-width: 2200px) {
-  #nav nav a {font-size:2.25em;}
-  #nav nav a {font-size:2.25em;}
-}
 
 
+/* Headline */
 
-/* Banner */
-
-#banner {
+section#banner {
   position: relative;
   height: 100vh;
-  min-height: 640px;
-  background-size: cover;
-  color: white;
-}
-
-#banner h1.headline {
-  position: absolute;
-  top: 310px;
-  right: 20px;
   text-align: right;
 }
 
-#banner span.the {
-  position: relative;
-  top: 25px;
-}
-#banner span.orion {
-  display: block;
-  font-size: 2em;
-}
-
-#banner span.space-elevator {
-  display: block;
-  margin-right: 15px;
-  font-size: 1.1em;
-}
-
-#banner p.rise {
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 8vh;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  font-family: 'meteoric';
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
-@media all and (min-width: 640px) {
-  #banner h1.headline {top: 290px; right: 30px;}
-  #banner span.orion {font-size: 2.5em;}
-  #banner span.space-elevator {font-size: 1.3em;}
-  #banner p.rise {bottom: 5vh; text-align: left; padding-left: 5%; font-size: 1.75em;}
-}
-
-@media all and (min-width: 800px) {
-  #banner span.orion {font-size: 2.5em;}
-  #banner span.space-elevator {font-size: 1.3em;}
-  #banner p.rise {bottom: 15vh; font-size: 1.75em;}
-}
-
-@media all and (min-width: 940px) {
-  #banner h1.headline {font-size: 1.75em;}
-  #banner span.orion {font-size: 2.5em;}
-  #banner span.space-elevator {font-size: 1.3em; margin-left: 3.5em;}
-  #banner p.rise {bottom: 15vh; padding-right: 7em; font-size: 1.75em;}
-}
-
-@media all and (min-width: 1600px) {
-  #banner h1.headline {top: 350px; left: 175px; font-size: 2.25em;}
-  #banner span.orion {font-size: 3.5em;}
-  #banner span.space-elevator {font-size: 1.7em;}
-  #banner p.rise {font-size: 2.25em;}
-}
-
-@media all and (min-width: 2200px) {
-  #banner h1.headline {top: 500px; left: 275px;}
-  #banner span.orion {font-size: 5em;}
-  #banner span.space-elevator {font-size: 2.7em;}
-  #banner p.rise {font-size: 3em;}
-}
-
-@media all and (min-width: 2900px) {
-  #banner h1.headline {top: 1200px; left: 375px; margin-right: 250px;}
-  #banner span.orion {font-size: 7em;}
-  #banner span.space-elevator {font-size: 3.5em;}
-  #banner p.rise {font-size: 3.75em;}
-}
-
-
-
-/*
- * Video
- */
-
-#video {
-  position: relative;
-  top: 4em;
-  padding-bottom: 5em;
-}
-
-#video div.video-container {
-  width: 100%;
-  max-width: 960px;
-}
-
-#video video {
-  max-width: 100%;
-  transition: .5s;
-}
-
-@media all and (min-width: 640px) {
-  #video {
-    display: flex;
-    justify-content: right;
-  }
-  #video div.video-container {
-    margin: 10vh;
-  }
-  #video video {
-    border-radius: 1em;
-  }
-}
-
-@media all and (min-width: 800px) {
-  #video {margin-top: 10em;}
-}
-
-#video div.video-container p.video-caption {
-  font-size: .8em;
-  text-align: right;
-  padding: 0 1em;
-}
-
-@media all and (min-width: 450px) {
-  #video div.video-container p.video-caption {
-    font-size: 1em;
-  }
-}
-
-
-
-/*
- * Team
- */
-
-#team {
-  padding: 5em 1em 7em;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#team img {
-  display: block;
-  margin: 1em;
-  border-radius: 1em;
-  width: 70px;
-}
-
-#team div.member {
-  display: flex;
-  align-items: center;
-  max-width: 960px;
-}
-
-#team div.member div.copy h3 {font-size: .9em;}
-#team div.member div.copy p {font-size: .8em; padding: .5em 0;}
-#team div.member div.copy a {font-size: .7em;}
-
-#team img.brad {margin-left: 1em;}
-#team img.lady {margin-left: 2em;}
-#team img.man {margin-left: 3em;}
-
-@media all and (min-width: 480px) {
-  #team img {width:80px;}
-  #team div.member div.copy h3 {font-size: 1.1em;}
-  #team div.member div.copy p {font-size: 1em;}
-  #team div.member div.copy a {font-size: .9em;}
-}
-
-@media all and (min-width: 640px) {
-  #team img {width:110px;}
-  #team div.member div.copy h3 {font-size: 1.5em;}
-  #team div.member div.copy p {font-size: 1.2em;}
-  #team div.member div.copy a {font-size: 1em;}
-}
-
-@media all and (min-width: 960px) {
-  #team img {width:150px;}
-  #team div.member div.copy h3 {font-size: 1.75em;}
-  #team div.member div.copy p {font-size: 1.5em;}
-  #team div.member div.copy a {font-size: 1.25em;}
-
-  #team img.brad {margin-left: 2em;}
-  #team img.lady {margin-left: 3em;}
-  #team img.man {margin-left: 4em;}
-}
-
-@media all and (min-width: 1600px) {
-  #team img {width:200px;}
-  #team div.member div.copy h3 {font-size: 2.5em;}
-  #team div.member div.copy p {font-size: 1.75em;}
-  #team div.member div.copy a {font-size: 1.5em;}
-
-  #team img.brad {margin-left: 2em;}
-  #team img.lady {margin-left: 4em;}
-  #team img.man {margin-left: 6em;}
-  #team div.member {max-width: 1200px;}
-}
-
-@media all and (min-width: 2400px) {
-  #team img {width:250px;}
-  #team div.member div.copy h3 {font-size: 3.5em;}
-  #team div.member div.copy p {font-size: 2.75em;}
-  #team div.member div.copy a {font-size: 2em;}
-
-  #team div.member {max-width: 1600px;}
-}
-
-
-
-
-/*
- * Resources
- */
-
-#resources {
-  max-width: 960px;
-  margin: 3em auto 7em;
-  text-align: center;
-}
-
-#resources img.report-image {
-  display: block;
-  width: 100%;
-  max-width: 480px;
-  margin: auto;
-}
-
-#resources p.report-prompt {padding: .25em 0 1em 0;}
-#resources p.report-caption-link {padding: 1em 0;}
-
-@media all and (min-width: 480px) {
-  #resources img.report-image {
-    border-radius: 1em;
-  }
-  #resources h2 {font-size: 2.5em;}
-  #resources p.report-prompt {font-size: 1em;}
-  #resources p.report-caption-link {font-size: 1em;}
-}
-
-@media all and (min-width: 960px) {
-  #resources h2 {font-size: 3em;}
-  #resources p.report-prompt {font-size: 1.2em;}
-  #resources p.report-caption-link {font-size: 1.2em;}
-}
-
-@media all and (min-width: 1200px) {
-  #resources h2 {font-size: 3.5em;}
-  #resources p.report-prompt {font-size: 1.5em;}
-  #resources p.report-caption-link {font-size: 1.5em;}
-}
-
-@media all and (min-width: 1600px) {
-  #resources img.report-image {max-width: 549px;}
-  #resources h2 {font-size: 4em;}
-  #resources p.report-prompt {font-size: 2em;}
-  #resources p.report-caption-link {font-size: 2em;}
-}
-
-
-
-/*
- * Contact
- */
-
-#contact {
-  padding: 1em;
-  max-width: 320px;
-  margin: auto;
-  font-family: 'meteoric';
-}
-
-#contact form fieldset {
-  padding: 0;
-  border: none;
-}
-
-#contact h2 {
-  font-size: 2.5em;
-}
-#contact h3 {
-  text-align: left;
-}
-
-#contact form#contact-form div.list {
-  margin: 1em 0;
-}
-
-#contact form#contact-form input#name,
-#contact form#contact-form input#mail {
-  box-sizing: border-box;
-  display: block;
-  margin: 1em 0;
-  background: white;
-  height: 2em;
-  width: 100%;
-  max-width: 320px;
-  border: none;
-  border-radius: 1em;
-  padding: .25em .75em;
-  transition: .25s;
-}
-
-#contact form#contact-form textarea {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 320px;
-  margin: 1em 0;
-  border: none;
-  border-radius: 1em;
-  padding: .75em;
-  transition: .25s;
-}
-
-#contact form#contact-form div.check {
-  margin: .5em 0;
-  max-width: 320px;
-}
-
-#contact form#contact-form div.check input {
-  display: inline;
-  border-radius: 5px;
-  transition: .25s;
-}
-
-#contact form#contact-form div.check label {
-  /* margin-left: 1em; */
-}
-
-#contact form#contact-form input:focus,
-#contact form#contact-form textarea:focus {
-  outline: 3px solid #7091b9;
-}
-
-#contact form#contact-form fieldset[disabled="disabled"] {
-  cursor: not-allowed;
-}
-#contact form#contact-form fieldset[disabled="disabled"] input#name,
-#contact form#contact-form fieldset[disabled="disabled"] input#mail,
-#contact form#contact-form fieldset[disabled="disabled"] textarea {
-  cursor: not-allowed;
-  border: 3px solid grey;
-  background: #f0f0f0;
-}
-#contact form#contact-form fieldset[disabled="disabled"] div.check input {
-  cursor: not-allowed;
-}
-#contact form#contact-form fieldset[disabled="disabled"] label {
-  cursor: not-allowed;
-  color: grey;
-}
-#contact form#contact-form fieldset[disabled="disabled"] input#submit {
-  cursor: not-allowed;
-  background: grey;
-  border-color: grey;
-  color: black;
-}
-
-#contact form#contact-form input#submit {
-  box-sizing: border-box;
-  display: block;
-  margin: 1em 0;
-  background: white;
-  height: 2em;
-  border: none;
-  font-family: 'meteoric';
-  font-weight: bold;
-  font-size: 1em;
-  border-radius: 1em;
-  padding: .25em .7em .22em;
-  border: 3px solid white;
-  transition: .25s;
-}
-
-#contact form#contact-form input#submit:hover {
-  cursor: pointer;
+h1.headline {
   color: white;
-  background: black;
-}
-
-@media all and (min-width: 390px) {
-
-  #contact h2,
-  #contact h3,
-  #contact form#contact-form input#submit {
-    position: relative;
-    left: -25px;
-  }
-
-}
-
-@media all and (min-width: 1600px) {
-  #contact {
-    margin: 8em auto;
-    transform: scale(1.25);
-  }
-}
-
-@media all and (min-width: 2200px) {
-  #contact {
-    margin: 18em auto;
-    transform: scale(1.5);
-  }
-}
-
-
-
-/*
- * Footer
- */
-
-#footer {
-  min-height: 100px;
-  margin-top: 5em;
-  height: inherit;
-  color: white;
-  text-align: center;
-}
-
-
-@media all and (min-width: 1600px) {
-  #footer {font-size:1.5em;}
-}
-
-@media all and (min-width: 2200px) {
-  #footer {font-size:2em;}
-}
-
-
-
-
-/* Page Layout */
-
-section.page {
-  box-sizing: border-box;
-  width: 857px;
-  max-width: calc(100% - 2em);
-  margin: 8em auto;
-  padding: 1em;
-  background: #fff;
-  box-shadow: 0 0 3px #a7a7a7;
-  color: #000;
-  border-radius: 1em;
-}
-
-section.page h1 {
-  text-align: left;
-  font-size: 2.25em;
-}
-
-@media all and (min-width: 480px) {
-  section.page h1 {
-    text-align: center;
-  }
-}
-
-section.page h1,
-section.page h2,
-section.page h3,
-section.page h4,
-section.page h5,
-section.page h6 {
-  box-sizing: border-box;
-  margin: 8px 0;
-}
-
-section.page p {
-  box-sizing: border-box;
-  margin: 1em 0;
-}
-
-section.page a {
-  color: #000;
-  font-weight: normal;
-  border-bottom: 1px solid #000;
-}
-
-section.page a:hover {
-  border-bottom: 1px solid #fff;
-}
-
-section.page img.center {
-  display: block;
+  text-shadow: 3px 3px 4px black;
+  padding: 1rem;
+  width: 320px;
   margin: auto;
-  max-width: 711px;
-  width: 100%;
-  border-radius: 1em;
 }
 
-section.page img.station {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  margin: auto;
-  border-radius: 1em;
-}
+h1.headline span.the,
+h1.headline span.space,
+h1.headline span.elevator { position: relative; }
 
-@media all and (min-width: 700px) {
-  section.page div.flex {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+h1.headline span.the { font-size: .75em; top: 1.2rem; }
+h1.headline span.space { font-size: 1.45em; }
+h1.headline span.elevator { font-size: .75em; top: -1rem; }
+
+@media all and (min-width: 10px) {
+  h1.headline {
+    position: absolute;
+    top: 30%;
+    text-align: right;
   }
-  section.page div.flex div.contact {
-    box-sizing: border-box;
-    max-width: 500px;
-    padding-right: 2em;
+}
+
+@media all and (min-width: 340px) {
+  h1.headline {
+    right: 5%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  h1.headline {
+    font-size: 3.5em;
+  }
+}
+
+@media all and (min-width: 1300px) {
+  h1.headline {
+    width: 520px;
+    font-size: 5em;
   }
 }
 

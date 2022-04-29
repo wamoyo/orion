@@ -9,127 +9,34 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div id="bg" class="hidden"></div>
+    <div id="rise" class="hidden"></div>
 
-    <div class="logo">
+    <header id="site-header">
       <a href="index.html">
-        <img src="images/logo-white.svg" alt="o">
+        <div class="logo">
+          <img src="images/logo-white.svg" alt="o">
+        </div>
       </a>
-    </div>
-
-    <section id="nav">
-      <input id="check" type="checkbox" value="">
-      <span id="x">X</span>
-      <label for="check" class='nav'>III</label>
-      <br>
+      <section id="nav">
+        <input id="check" type="checkbox" value="">
+        <span id="x">X</span>
+        <label for="check" class='nav'>III</label>
+        <br>
 <nav><!-- Whitespace Matters Here -->
 <a href="index.html">Home</a><a href="background.html">Background</a><a href="technology.html">Technology</a><a href="carbon-nanotubes.html">Carbon Nanotubes</a><a href="contact.html">Contact</a>
 </nav>
-    </section>
+      </section>
+    </header>
 
     <section id="banner">
       <h1 class="headline">
         <span class="the">The</span>
-        <span class="orion">Space</span>
+        <span class="space">Space</span>
         <span class="elevator">Elevator</span>
-        <span class="company">Company</span>
       </h1>
-      <p class="rise">rise to the stars</p>
     </section>
 
-    <section id="video">
-      <div class="video-container">
-        <video src="videos/bloomberg-interview.mp4" controls poster="images/video-poster-1.jpg"></video>
-        <p class="video-caption">
-          <a href="https://www.bloomberg.com/news/articles/2022-02-17/building-a-space-elevator-may-be-getting-closer-to-reality" target="_blank" class="video-caption">Bloomberg Interview, February 17<sup>th</sup> 2022</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="team">
-      <div class="member">
-        <img class="brad" src="images/Bradley-Edwards.jpg" alt="">
-        <div class="copy">
-          <h3>Chief Scientist</h3>
-          <p>Global leader on space elevators and carbon nanotube manufacturing.</p>
-          <a href="#">Full Bio »</a>
-        </div>
-      </div>
-      <div class="member">
-        <img class="lady" src="images/lady.jpg" alt="">
-        <div class="copy">
-          <h3>Operations Director</h3>
-          <p>Lead architect of a really big bridge or building?</p>
-          <a href="#">Full Bio »</a>
-        </div>
-      </div>
-      <div class="member">
-        <img class="man" src="images/man.jpg" alt="">
-        <div class="copy">
-          <h3>Financial Director</h3>
-          <p>Raised tons of funds for previous scientific missions?</p>
-          <a href="#">Full Bio »</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="resources">
-      <h2>In Our Lifetime</h2>
-      <p class="report-prompt">Read the original NASA report.</p>
-      <a class="report-image-link" href="http://www.niac.usra.edu/files/studies/final_report/521Edwards.pdf" target="_blank">
-        <img class="report-image" src="images/report-cover.jpg" alt="">
-      </a>
-      <p class="report-caption-link">
-        <a href="http://www.niac.usra.edu/files/studies/final_report/521Edwards.pdf" target="_blank">Open Report »</a>
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Rise With Us</h2>
-      <form id="contact-form" action="#" method="post">
-        <fieldset disabled="disabled">
-          <input id="name" type="text" name="name" value="" placeholder="Name">
-          <input id="mail" type="email" name="mail" value="" placeholder="Email">
-          <div class="list">
-            <h3>Check all that interest you</h3>
-            <div class="check">
-              <input id="follow" type="checkbox" name="follow">
-              <label for="follow">General Updates</label>
-            </div>
-            <div class="check">
-              <input id="investor" type="checkbox" name="investor">
-              <label for="investor">Invest In The Space Elevator</label>
-            </div>
-            <div class="check">
-              <input id="media" type="checkbox" name="media">
-              <label for="media">Make A Media Inquiry</label>
-            </div>
-            <div class="check">
-              <input id="science" type="checkbox" name="science">
-              <label for="science">Science &amp; Engineering Team</label>
-            </div>
-            <div class="check">
-              <input id="art" type="checkbox" name="art">
-              <label for="art">Art &amp; Architecture Team</label>
-            </div>
-            <div class="check">
-              <input id="presale" type="checkbox" name="presale">
-              <label for="presale">Ride The Space Elevator</label>
-            </div>
-            <div class="check">
-              <input id="entrepreneurs" type="checkbox" name="entrepreneurs">
-              <label for="entrepreneurs">Build Your Business With Us</label>
-            </div>
-          </div>
-          <h3>Optional Message</h3>
-          <textarea id="message" name="message" rows="8" placeholder="Anything you'd like to ask or share with us..."></textarea>
-          <input id="submit" type="submit" name="submit" value="Submit »">
-        </fieldset>
-      </form>
-    </section>
-
-    <section id="footer">
-      <p>© 2022 Space Elevator ® Inc.</p>
+    <section id="ready">
     </section>
 
     <script src="scripts/form.js"></script>
