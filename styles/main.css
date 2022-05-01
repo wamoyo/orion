@@ -355,6 +355,10 @@ section#ready {
   }
 }
 
+@media all and (min-width: 1300px) {
+  #ready { font-size: 1.5em; }
+}
+
 
 
 
