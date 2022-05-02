@@ -94,6 +94,22 @@ a:hover {
   border-color: #777;
 }
 
+button,
+a.button {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  border: 3px solid white;
+  border-radius: 1rem;
+}
+
+button:hover,
+a.button:hover {
+  background: white;
+  color: black;
+  border-color: black;
+}
+
 div#rise.hidden { opacity: 0; top: 100px; }
 div#rise {
   background: url('../images/rise.png') 25% top / cover no-repeat;
@@ -357,6 +373,84 @@ section#ready {
 
 @media all and (min-width: 1300px) {
   #ready { font-size: 1.5em; }
+}
+
+
+
+
+/* Imagine The Possibilities */
+
+section#possibilities {
+  max-width: 800px;
+  margin: 9rem auto 1rem;
+  padding: 1rem;
+  color: white;
+}
+
+section#possibilities p.prompt {
+  margin-bottom: 3rem;
+  font-size: 1.5em;
+  text-align: center;
+}
+section#possibilities h2 {
+  text-align: center;
+}
+
+#possibilities div.tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#possibilities div.stem {
+  background: white;
+  border-radius: 50%;
+  width: 3px;
+  height: 700px;
+}
+
+#possibilities div.left-items.hidden { display: none; }
+
+@media all and (min-width: 800px) {
+  #possibilities div.stem { height: 400px }
+  #possibilities div.left-items.hidden { display: block; margin-top: -5rem; }
+  #possibilities div.right-items div.flip { display: none; }
+}
+
+#possibilities div.right-item,
+#possibilities div.left-item {
+  display: flex;
+  align-items: center;
+}
+#possibilities div.left-item {
+  justify-content: flex-end;
+}
+#possibilities div.right-item {
+  justify-content: flex-start;
+}
+#possibilities div.right-item,
+#possibilities div.left-item {
+  margin: 3rem 0;
+}
+
+#possibilities div.right-item div.branch,
+#possibilities div.left-item div.branch {
+  background: white;
+  width: 30px;
+  height: 3px;
+  border-radius: 50%;
+}
+
+#possibilities div.right-item div.copy,
+#possibilities div.left-item div.copy {
+  border: 3px solid white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#possibilities div.right-item div.copy p,
+#possibilities div.left-item div.copy p {
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 
