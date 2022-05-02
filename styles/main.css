@@ -429,6 +429,7 @@ section#possibilities h2 {
 }
 #possibilities div.left-item {
   justify-content: flex-end;
+  text-align: right;
 }
 #possibilities div.right-item {
   justify-content: flex-start;
@@ -455,7 +456,6 @@ section#possibilities h2 {
 
 #possibilities div.right-item div.copy p,
 #possibilities div.left-item div.copy p {
-  display: inline-block;
   margin-bottom: 0;
 }
 
