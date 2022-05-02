@@ -110,15 +110,6 @@ a.button:hover {
   border-color: black;
 }
 
-div#rise.hidden { opacity: 0; top: 100px; }
-div#rise {
-  background: url('../images/rise.png') 25% top / cover no-repeat;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: 3s;
-}
-
 
 
 /* Header - Logo and Navigation */
@@ -269,16 +260,31 @@ div.logo a:hover {
 
 section#banner {
   position: relative;
-  background: url('../images/rise.png') 25% top / cover no-repeat;
+  background: transparent;
   min-height: 500px;
   height: 100vh;
   text-align: right;
   z-index: 1;
+  transition: background 2s ease-in 2s;
+}
+
+section#banner.bghidden::after { opacity: 0; top: 100px; }
+section#banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -1;
+  background: url('../images/rise.png') 25% top / cover no-repeat;
+  transition: 3s;
 }
 
 /* I learned a new trick, cool */
 @media all and (min-aspect-ratio: 414/295) {
-  section#banner {
+  section#banner::after {
     background: url('../images/rise.png') left top / contain no-repeat;
   }
 }
