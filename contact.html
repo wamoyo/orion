@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body class='page'>
+  <body>
 
     <section id="nav">
       <input id="check" type="checkbox" value="">
@@ -20,22 +20,54 @@
 </nav>
     </section>
 
-    <section class="page">
-      <div class="flex">
-        <div class="contact">
-          <h1>Contact</h1>
-          <p>We would love to hear from anyone interested in learning more. We are especially kean in getting in touch with individuals ready to build the space elevator with us.</p>
-          <p>Email</p>
-          <p>Phone</p>
-          <p>Mail</p>
-        </div>
-        <div class="image">
-          <img class="station" src="images/station.jpg" alt="Space Station">
-        </div>
+    <section id="contact">
+      <div class="copy">
+        <h1>Rise With Us</h1>
+        <p class="med">Building the space elevator will be the endeavor of our lifetimes. It will herald a new age for human civilization. It will change our world, and worlds beyond our own.</p>
+        <p>Are you ready to join this epic voyage?</p>
       </div>
+      <form id="contact-form" action="#" method="post">
+        <h2>Make Contact</h2>
+        <fieldset disabled="disabled">
+          <input id="name" type="text" name="name" value="" placeholder="Name">
+          <input id="mail" type="email" name="mail" value="" placeholder="Email">
+          <div class="list">
+            <h3>Check all that interest you</h3>
+            <div class="check">
+              <input id="follow" type="checkbox" name="follow">
+              <label for="follow">General Updates</label>
+            </div>
+            <div class="check">
+              <input id="investor" type="checkbox" name="investor">
+              <label for="investor">Invest In The Space Elevator</label>
+            </div>
+            <div class="check">
+              <input id="media" type="checkbox" name="media">
+              <label for="media">Make A Media Inquiry</label>
+            </div>
+            <div class="check">
+              <input id="science" type="checkbox" name="science">
+              <label for="science">Science &amp; Engineering Team</label>
+            </div>
+            <div class="check">
+              <input id="art" type="checkbox" name="art">
+              <label for="art">Art &amp; Architecture Team</label>
+            </div>
+            <div class="check">
+              <input id="presale" type="checkbox" name="presale">
+              <label for="presale">Ride The Space Elevator</label>
+            </div>
+            <div class="check">
+              <input id="entrepreneurs" type="checkbox" name="entrepreneurs">
+              <label for="entrepreneurs">Build Your Business With Us</label>
+            </div>
+          </div>
+          <h3>Optional Message</h3>
+          <textarea id="message" name="message" rows="8" placeholder="Anything you'd like to ask or share with us..."></textarea>
+          <input id="submit" type="submit" name="submit" value="Submit »">
+        </fieldset>
+      </form>
     </section>
-
-
 
     <section id="footer">
       <p>© 2022 The Space Elevator Company ® Inc.</p>

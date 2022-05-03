@@ -15,7 +15,7 @@ caption, th, td { text-align: left; font-weight: normal; }
 sup, sub { line-height: 1; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-input, textarea { -webkit-appearance: none; }
+/* input, textarea { -webkit-appearance: none; } */
 *,*:before,*:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 i, em { font-style: italic; }
@@ -587,6 +587,167 @@ section.page img.station {
     box-sizing: border-box;
     max-width: 500px;
     padding-right: 2em;
+  }
+}
+
+
+
+/*
+ * Contact
+ */
+
+#contact {
+  padding: 9rem 1rem;
+  max-width: 757px;
+  margin: auto;
+  font-family: 'meteoric';
+  color: white;
+}
+
+#contact div.copy {
+  position: relative;
+  left: -1rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#contact p.med { font-size: 1.25em; }
+
+#contact form {
+  max-width: 357px;
+  margin: auto;
+}
+
+#contact form fieldset {
+  padding: 0;
+  border: none;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+}
+#contact h3 {
+  text-align: left;
+}
+
+#contact form#contact-form div.list {
+  margin: 1em 0;
+}
+
+#contact form#contact-form input#name,
+#contact form#contact-form input#mail {
+  box-sizing: border-box;
+  display: block;
+  margin: 1em 0;
+  background: white;
+  height: 2em;
+  width: 100%;
+  max-width: 320px;
+  border: none;
+  border-radius: 1em;
+  padding: .25em .75em;
+  transition: .25s;
+}
+
+#contact form#contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 320px;
+  margin: 1em 0;
+  border: none;
+  border-radius: 1em;
+  padding: .75em;
+  transition: .25s;
+}
+
+#contact form#contact-form div.check {
+  margin: .5em 0;
+  max-width: 320px;
+}
+
+#contact form#contact-form div.check input {
+  display: inline;
+  border-radius: 5px;
+  transition: .25s;
+}
+
+#contact form#contact-form div.check label {
+  /* margin-left: 1em; */
+}
+
+#contact form#contact-form input:focus,
+#contact form#contact-form textarea:focus {
+  outline: 3px solid #7091b9;
+}
+
+#contact form#contact-form fieldset[disabled="disabled"] {
+  cursor: not-allowed;
+}
+#contact form#contact-form fieldset[disabled="disabled"] input#name,
+#contact form#contact-form fieldset[disabled="disabled"] input#mail,
+#contact form#contact-form fieldset[disabled="disabled"] textarea {
+  cursor: not-allowed;
+  border: 3px solid grey;
+  background: #f0f0f0;
+}
+#contact form#contact-form fieldset[disabled="disabled"] div.check input {
+  cursor: not-allowed;
+}
+#contact form#contact-form fieldset[disabled="disabled"] label {
+  cursor: not-allowed;
+  color: grey;
+}
+#contact form#contact-form fieldset[disabled="disabled"] input#submit {
+  cursor: not-allowed;
+  background: grey;
+  border-color: grey;
+  color: black;
+}
+
+#contact form#contact-form input#submit {
+  box-sizing: border-box;
+  display: block;
+  margin: 1em 0;
+  background: white;
+  height: 2em;
+  border: none;
+  font-family: 'meteoric';
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 1em;
+  padding: .25em .7em .22em;
+  border: 3px solid white;
+  transition: .25s;
+}
+
+#contact form#contact-form input#submit:hover {
+  cursor: pointer;
+  color: white;
+  background: black;
+}
+
+@media all and (min-width: 390px) {
+
+  #contact h2,
+  #contact h3,
+  #contact form#contact-form input#submit {
+    position: relative;
+    left: -25px;
+  }
+
+}
+
+@media all and (min-width: 1600px) {
+  #contact {
+    margin: 8em auto;
+    transform: scale(1.25);
+  }
+}
+
+@media all and (min-width: 2200px) {
+  #contact {
+    margin: 18em auto;
+    transform: scale(1.5);
   }
 }
 
