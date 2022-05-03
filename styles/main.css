@@ -606,9 +606,21 @@ section.page img.station {
 
 #contact div.copy {
   position: relative;
-  left: -1rem;
   text-align: center;
   margin-bottom: 4rem;
+}
+
+@media all and (min-width: 480px) {
+  #contact div.copy {
+    padding: 1rem;
+    left: -1rem;
+  }
+}
+
+@media all and (min-width: 765px) {
+  #contact div.copy {
+    padding: 0rem;
+  }
 }
 
 #contact p.med { font-size: 1.25em; }
@@ -726,7 +738,7 @@ section.page img.station {
   background: black;
 }
 
-@media all and (min-width: 390px) {
+@media all and (min-width: 480px) {
 
   #contact h2,
   #contact h3,
