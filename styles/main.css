@@ -495,6 +495,7 @@ section#future {
 #future p#copyright {
   position: absolute;
   bottom: 1rem;
+  padding: 1rem;
   right: 0;
   left: 0;
   text-align: center;
@@ -512,7 +513,7 @@ body.page {
   min-height: 100%;
 }
 
-#footer p { color: white; text-align: center; }
+#footer p { padding: 0 1rem; color: white; text-align: center; }
 
 section.page {
   width: 857px;
