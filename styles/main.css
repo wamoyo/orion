@@ -664,6 +664,22 @@ table.nanorequirements tr:last-child td:last-child {
   border-bottom-right-radius: 1rem;
 }
 
+@media all and (max-width: 440px) {
+  table.nanorequirements {
+    width: 100%;
+    font-size: .75em;
+  }
+}
+
+@media all and (max-width: 350px) {
+  table.nanorequirements {
+    width: 100%;
+    font-size: .65em;
+  }
+}
+
+
+
 
 /*
  * Contact
