@@ -216,7 +216,7 @@ div.logo a:hover {
 #nav #check:checked ~ nav {
   background: white;
   box-shadow: 0 0 4px 2px black;
-  height: 185px;
+  height: 215px;
   transform: scale(1);
   border-radius: 1em;
   padding: 1em;
@@ -529,6 +529,11 @@ section.page {
 section.page h1 {
   text-align: left;
   font-size: 2.25em;
+  margin-bottom: 2rem;
+}
+
+section.page h2 {
+  font-size: 1.75em;
 }
 
 @media all and (min-width: 480px) {
@@ -544,7 +549,6 @@ section.page h4,
 section.page h5,
 section.page h6 {
   box-sizing: border-box;
-  margin: 8px 0;
 }
 
 section.page p {
@@ -562,20 +566,27 @@ section.page a:hover {
   border-bottom: 1px solid #fff;
 }
 
+section.page p.center {
+  margin: 1rem auto;
+  max-width: 711px;
+  width: 100%;
+}
+
 section.page img.center {
   display: block;
-  margin: auto;
+  margin: 1rem auto;
   max-width: 711px;
   width: 100%;
   border-radius: 1em;
 }
 
-section.page img.station {
-  display: block;
-  width: 100%;
+
+section.page img.aside {
+  display: inline-block;
+  float: right;
   max-width: 320px;
-  margin: auto;
-  border-radius: 1em;
+  border-radius: 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 
 @media all and (min-width: 700px) {
@@ -591,6 +602,67 @@ section.page img.station {
   }
 }
 
+
+
+/*
+ * Carbon Nanotubes
+ */
+
+ul.nanolist {
+  list-style: none;
+  margin: auto;
+}
+
+ul.nanolist li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+}
+
+ul.nanolist li strong {
+  display: inline-block;
+  max-width: 40px;
+  margin: .35rem 0;
+  flex-grow: 0;
+}
+
+ul.nanolist li span {
+  display: inline-block;
+  max-width: 700px;
+  margin: .35rem 0;
+  padding-left: 1rem;
+}
+
+table.nanorequirements {
+  width: 90%;
+  margin: 1rem auto;
+  border-spacing: 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  overflow: hidden;
+}
+
+table.nanorequirements tr.header td,
+table.nanorequirements tr.header {
+  background: #e0e0e0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  font-weight: bold;
+}
+
+table.nanorequirements tr td {
+  padding: .75rem;
+  background: #f7f7f7;
+}
+
+table.nanorequirements tr:last-child td:first-child {
+  border-bottom-left-radius: 1rem;
+}
+
+table.nanorequirements tr:last-child td:last-child {
+  border-bottom-right-radius: 1rem;
+}
 
 
 /*
