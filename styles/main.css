@@ -460,6 +460,10 @@ section#possibilities h2 {
   margin-bottom: 0;
 }
 
+#possibilities a.application-button {
+  margin: auto;
+}
+
 
 
 
