@@ -490,7 +490,7 @@ section#future {
 #future h2.future {
   position: absolute;
   max-width: 865px;
-  text-align: right;
+  text-align: center;
   bottom: 27vh;
   left: 2rem;
   right: 2rem;
