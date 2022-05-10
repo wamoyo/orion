@@ -487,11 +487,12 @@ section#future {
   font-size: 1.25em;
   font-weight: bold;
 }
-#future h2.future {
+#future div.make-contact {
   position: absolute;
   max-width: 865px;
+  margin: auto;
   text-align: center;
-  bottom: 27vh;
+  bottom: 23vh;
   left: 2rem;
   right: 2rem;
 }
