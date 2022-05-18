@@ -20,7 +20,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 i, em { font-style: italic; }
 b, strong { font-weight: bold; }
-q:lang(en) { quotes: '&#8220;' '&#8221;' '&#8216;' '&#8217;'; }
+/* q:lang(en) { quotes: '&#8220;' '&#8221;' '&#8216;' '&#8217;'; } */
 h1, h2, h3, h4, h5, h6, p { margin-bottom: 15px; }
 ul { list-style: outside disc; padding-left: 24px; }
 ol { list-style: outside decimal; padding-left: 24px; }
@@ -85,8 +85,8 @@ a {
   color: white;
   font-weight: bold;
   font-family: 'meteoric';
-  text-decoration: none;
-  border-bottom: 1px solid #000;
+  /* text-decoration: none; */
+  /* border-bottom: 1px solid #000; */
   transition: .5s;
 }
 
@@ -562,13 +562,15 @@ section.page p {
 }
 
 section.page a {
-  color: #000;
+  color: #34f;
   font-weight: normal;
-  border-bottom: 1px solid #000;
+  text-decoration: underline;
+  /* border-bottom: 1px solid #000; */
 }
 
 section.page a:hover {
-  border-bottom: 1px solid #fff;
+  text-decoration: none;
+  /* border-bottom: 1px solid #fff; */
 }
 
 section.page p.center {
