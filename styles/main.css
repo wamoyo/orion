@@ -609,6 +609,19 @@ section.page img.aside {
   }
 }
 
+div.video-container {
+  width: 100%;
+}
+
+div.video-container video {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+div.video-container p.video-caption {
+  text-align: right;
+}
+
 
 
 /*
