@@ -7,7 +7,7 @@
  * License: GNU Public License
 */
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, input, select, button, textarea, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; border: 0; border-radius: 0; font-weight: inherit; font-style: inherit; font-family: inherit; line-height: 1; text-decoration: none; vertical-align: baseline; }
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, input, select, button, textarea, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; border: 0; border-radius: 0; font-weight: inherit; font-style: inherit; font-family: inherit; text-decoration: none; vertical-align: baseline; }
 html { overflow-y: scroll; -webkit-text-size-adjust: 100%; }
 ol, ul { list-style: none; }
 table { border-collapse: collapse; border-spacing: 0; }
@@ -216,7 +216,7 @@ div.logo a:hover {
 #nav #check:checked ~ nav {
   background: white;
   box-shadow: 0 0 4px 2px black;
-  height: 215px;
+  height: 230px;
   transform: scale(1);
   border-radius: 1em;
   padding: 1em;
@@ -531,6 +531,10 @@ section.page {
   border-radius: 1em;
 }
 
+section.page p {
+  color: #222;
+}
+
 section.page h1 {
   text-align: left;
   font-size: 2.25em;
@@ -562,7 +566,7 @@ section.page p {
 }
 
 section.page a {
-  color: #34f;
+  color: #000;
   font-weight: normal;
   text-decoration: underline;
   /* border-bottom: 1px solid #000; */
@@ -745,10 +749,12 @@ table.nanorequirements tr:last-child td:last-child {
 }
 
 #contact h2 {
-  font-size: 2.5em;
+  font-size: 2.25em;
 }
 #contact h3 {
+  font-size: 1.45em;
   text-align: left;
+  margin-top: 1.5em;
 }
 
 #contact form#contact-form div.list {
