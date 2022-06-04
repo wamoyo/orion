@@ -518,7 +518,7 @@ body.page {
   min-height: 100%;
 }
 
-#footer p { padding: 0 1rem; color: white; text-align: center; }
+#footer p { margin-bottom: 2rem; padding: 0 1rem; color: white; text-align: center; }
 
 section.page {
   width: 857px;
@@ -829,6 +829,24 @@ table.nanorequirements tr:last-child td:last-child {
   background: grey;
   border-color: grey;
   color: black;
+}
+
+#contact p#form-status {
+  display: inline-block;
+  background: #b8bbf2;
+  border-radius: 1rem;
+  color: black;
+  transition: .5s;
+}
+
+#contact p#form-status.fail {
+  padding: .75rem;
+  font-size: 1rem;
+}
+
+#contact p#form-status.success {
+  padding: .75rem;
+  font-size: 1rem;
 }
 
 #contact form#contact-form input#submit {

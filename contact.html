@@ -36,8 +36,8 @@
       <form id="contact-form" action="#" method="post">
         <h2>Make Contact</h2>
         <fieldset disabled="disabled">
-          <input id="name" type="text" name="name" value="" placeholder="Name">
-          <input id="mail" type="email" name="mail" value="" placeholder="Email">
+          <input id="name" type="text" name="name" value="" placeholder="Name" maxlength="450">
+          <input id="mail" type="email" name="mail" value="" placeholder="Email" maxlength="350">
           <div class="list">
             <h3>Check all that interest you</h3>
             <div class="check">
@@ -70,7 +70,10 @@
             </div>
           </div>
           <h3>Optional Message</h3>
-          <textarea id="message" name="message" rows="8" placeholder="Enter your message here..."></textarea>
+          <textarea id="message" name="message" rows="8" placeholder="Enter your message here..." maxlength="4500"></textarea>
+          <br>
+          <p id="form-status"></p>
+          <br>
           <input id="submit" type="submit" name="submit" value="Submit »">
         </fieldset>
       </form>
