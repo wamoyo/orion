@@ -102,6 +102,7 @@ a.button {
   padding: 1rem;
   border: 3px solid white;
   border-radius: 1rem;
+  background: transparent;
 }
 
 button:hover,
@@ -270,7 +271,8 @@ section#banner {
 }
 
 section#banner.bghidden::after { opacity: 0; top: 100px; }
-section#banner::after {
+section#banner::after,
+section#banner.rise::after {
   content: '';
   position: absolute;
   top: 0;
@@ -285,31 +287,100 @@ section#banner::after {
 
 /* I learned a new trick, cool */
 @media all and (min-aspect-ratio: 414/295) {
-  section#banner::after {
+  section#banner::after,
+  section#banner.rise::after {
     background: url('../images/rise.png') left top / contain no-repeat;
   }
 }
 
-h1.headline {
+h1#headline {
+  position: relative;
+  top: 0;
   color: white;
   text-shadow: 3px 3px 4px black;
   padding: 1rem;
   width: 320px;
   margin: auto;
+  opacity: 1;
+  transition: all 1.5s ease-in .5s;
+}
+h1#headline.titlehidden { opacity: 0; top: 100px; }
+
+h1#headline span.the,
+h1#headline span.space,
+h1#headline span.elevator,
+h1#headline span.company { position: relative; }
+
+h1#headline span.the { font-size: .75em; top: 1.2rem; }
+h1#headline span.space { font-size: 1.45em; }
+h1#headline span.elevator { font-size: .75em; top: -1rem; }
+h1#headline span.company { display: block; font-size: .4em; top: -1rem; right: 3.25em; }
+
+button#next {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 2px grey;
+  transform: translate(-50%);
+  border: 3px solid white;
+  transition: .75s;
 }
 
-h1.headline span.the,
-h1.headline span.space,
-h1.headline span.elevator,
-h1.headline span.company { position: relative; }
+button#next:hover,
+button#next:focus {
+  border: 3px solid white;
+  background: rgba(255,255,255,0.25);
+  color: white;
+}
+button#next:active { color: white; }
 
-h1.headline span.the { font-size: .75em; top: 1.2rem; }
-h1.headline span.space { font-size: 1.45em; }
-h1.headline span.elevator { font-size: .75em; top: -1rem; }
-h1.headline span.company { display: block; font-size: .4em; top: -1rem; right: 3.25em; }
+@media all and (min-width: 700px) and (min-height: 900px) {
+
+  button#next {
+    display: inline-block;
+    bottom: 12rem;
+    font-size: 1.7em;
+    text-shadow: 1px 1px 2px grey;
+    left: auto;
+    right: 10%;
+    transform: translate(0);
+  }
+
+}
+
+
+
+/*
+ * Introductory Slide Show
+ */
+
+section#banner.moon-landing::after { background: url('/images/moon-landing.png') 70% top / cover no-repeat; }
+h1#headline.moon-landing {}
+
+section#banner.asteroid::after { background: url('/images/asteroid.png') center top / cover no-repeat; }
+h1#headline.moon-landing::after { background: url('/images/moon-landing.png') 70% top / cover no-repeat; }
+
+
+
+
+
+
+
+
+
+
+/*
+ * End Of Introductory Slide Show
+ */
+
+
 
 @media all and (min-width: 10px) {
-  h1.headline {
+  h1#headline {
     position: absolute;
     top: 30%;
     text-align: right;
@@ -317,19 +388,19 @@ h1.headline span.company { display: block; font-size: .4em; top: -1rem; right: 3
 }
 
 @media all and (min-width: 340px) {
-  h1.headline {
+  h1#headline {
     right: 5%;
   }
 }
 
 @media all and (min-width: 900px) {
-  h1.headline {
+  h1#headline {
     font-size: 3.5em;
   }
 }
 
 @media all and (min-width: 1300px) {
-  h1.headline {
+  h1#headline {
     width: 520px;
     font-size: 5em;
   }
