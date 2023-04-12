@@ -318,7 +318,7 @@ h1#headline span.company { display: block; font-size: .4em; top: -1rem; right: 3
 
 button#next {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   left: 50%;
   font-weight: bold;
   font-size: 1.4em;
