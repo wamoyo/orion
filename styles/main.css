@@ -359,16 +359,118 @@ button#next:active { color: white; }
  */
 
 section#banner.moon-landing::after { background: url('/images/moon-landing.png') 70% top / cover no-repeat; }
-h1#headline.moon-landing {}
+h1#headline.moon-landing {
+  top: 10%;
+}
+
 
 section#banner.asteroid::after { background: url('/images/asteroid.png') center top / cover no-repeat; }
-h1#headline.moon-landing::after { background: url('/images/moon-landing.png') 70% top / cover no-repeat; }
+h1#headline.asteroid {
+  top: 15%;
+}
+h1#headline.asteroid span.smaller {
+  font-size: .65em;
+}
+h1#headline.asteroid span.smallest {
+  font-size: .5em;
+}
+@media all and (min-width: 480px) { h1#headline.asteroid { width: 480px; }}
+@media all and (min-width: 700px) { h1#headline.asteroid { width: 580px; }}
 
 
+section#banner.launches::after { background: url('/images/rocket-launches.png') center top / cover no-repeat; }
+h1#headline.launches {
+  top: 10%;
+}
+h1#headline span.glorious { font-size: 1.35em; }
 
 
+section#banner.ocean::after { background: url('/images/ocean-elevator.png') center top / cover no-repeat; }
+h1#headline.ocean {
+  top: 20%;
+  text-align: left;
+}
+h1#headline.ocean span.chance { font-size: 1.4em; }
+@media all and (min-width: 480px) { h1#headline.ocean { width: 480px; }}
+@media all and (min-width: 700px) { h1#headline.ocean { width: 580px; }}
 
 
+section#banner.climb::after { background: url('/images/climb-to-space.png') 62.5% center / cover no-repeat; }
+h1#headline.climb {
+  top: 20%;
+}
+h1#headline.climb span.climb { font-size: 1.25em; }
+@media all and (min-width: 480px) { h1#headline.climb { width: 480px; right: auto; left: 5%; text-align: left; }}
+
+
+section#banner.cost::after { background: url('/images/elevator-cost.png') center center / cover no-repeat; }
+h1#headline.cost {
+  top: 12.5%;
+}
+h1#headline.cost span.smaller {
+  font-size: .7em;
+}
+h1#headline.cost span.cost { font-size: 1.5em; }
+@media all and (min-width: 480px) { h1#headline.cost { width: 480px; right: auto; left: 10%; text-align: left; }}
+@media all and (min-width: 700px) { h1#headline.cost { width: 525px; top: 15%; left: 50%; transform: translate(-50%); text-align: center; }}
+
+
+section#banner.package::after { background: url('/images/fedex.png') center bottom / cover no-repeat; }
+h1#headline.package {
+  top: 12.5%;
+  font-size: 2.25em;
+  text-align: left;
+}
+h1#headline.package span.smaller {
+  font-size: .7em;
+}
+h1#headline.package span.package { font-size: 1.25em; }
+@media all and (min-width: 480px) { h1#headline.package { font-size: 2.5em; width: 480px; right: auto; left: 5%; text-align: left; }}
+@media all and (min-width: 700px) { h1#headline.package { font-size: 3em; }}
+
+
+section#banner.operational::after { background: url('/images/operational.png') 60% center / cover no-repeat; }
+h1#headline.operational {
+  top: 15%;
+  font-size: 2.25em;
+  text-align: left;
+}
+h1#headline.operational span.first {
+  font-size: 1.5em;
+}
+h1#headline.operational span.year {
+  font-size: 1.7em;
+}
+h1#headline.operational span.operational { font-size: 1.25em; }
+@media all and (min-width: 480px) { h1#headline.operational { font-size: 2.5em; width: 480px; right: auto; left: 5%; }}
+@media all and (min-width: 700px) { h1#headline.operational { font-size: 3em; }}
+
+
+section#banner.stations::after { background: url('/images/space-stations.png') center center / cover no-repeat; }
+h1#headline.stations {
+  top: 25%;
+  font-size: 4em;
+  text-align: left;
+}
+
+
+section#banner.solar::after { background: url('/images/space-based-solar.png') 60% center / cover no-repeat; }
+h1#headline.solar {
+  top: 15%;
+  text-align: left;
+}
+@media all and (min-width: 480px) { h1#headline.solar { font-size: 2.5em; width: 480px; right: auto; left: 5%; }}
+@media all and (min-width: 700px) { h1#headline.solar { font-size: 3.5em; }}
+
+
+section#banner.dreams::after { background: url('/images/mars-elevator.png') 55% center / cover no-repeat; }
+h1#headline.dreams {
+  top: 15%;
+  text-align: left;
+  font-size: 3.5em;
+}
+@media all and (min-width: 480px) { h1#headline.dreams { width: 480px; right: auto; left: 5%; }}
+@media all and (min-width: 700px) { h1#headline.dreams { width: 550px; }}
 
 
 

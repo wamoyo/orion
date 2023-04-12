@@ -15,12 +15,21 @@
         <span class="company">Company</span>
         `},
       { class: 'moon-landing', title: '<span class="space">Space</span> The Final Frontier'},
-      { class: 'asteroid', title: 'We Dream Of Space, The Wonders, The Resources...'},
+      { class: 'asteroid', title: 'We <span class="space">Dream</span> of Space<br><span class="smaller">The Wonders<br>The Resources...</span>'},
+      { class: 'launches', title: '...but the <span class="glorious">Glorious</span> rocket launches are too expensive.'},
+      { class: 'ocean', title: 'We have a <span class="chance">Chance</span>...'},
+      { class: 'climb', title: 'By building the <span class="climb">Space Elevator!</span>'},
+      { class: 'cost', title: 'For <span class="cost"><sup>1</sup>⁄<sub>10</sub></span> <span class="smaller">the cost of the International Space Station</span>'},
+      { class: 'package', title: 'Getting to space for the cost of<br><span class="package">Mailing A Package</span>'},
+      { class: 'operational', title: 'We plan to have the <span class="space">first</span> elevator operational by <span class="year">2033</span>'},
+      { class: 'stations', title: 'And then...'},
+      { class: 'solar', title: 'What are your <span class="space">Dreams</span> for Space?'},
+      { class: 'dreams', title: 'Dreams have <span class="space">No Limits</span>'},
     ]
 
     next.addEventListener('click', function (event) {
       slide += 1
-      if (slide >= 8) {
+      if (slide >= 13) {
         window.scrollTo({top: readySection.offsetTop - 133, behavior: 'smooth'})
         slide = 0
       }
