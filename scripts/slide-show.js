@@ -29,7 +29,7 @@
 
     next.addEventListener('click', function (event) {
       slide += 1
-      if (slide >= 13) {
+      if (slide >= 12) {
         window.scrollTo({top: readySection.offsetTop - 133, behavior: 'smooth'})
         slide = 0
       }
