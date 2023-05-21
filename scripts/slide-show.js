@@ -4,7 +4,7 @@
 
     var banner = document.getElementById('banner')
     var headline = document.getElementById('headline')
-    var next = document.getElementById('next')
+    var scroll = document.getElementById('scroll')
     var readySection = document.getElementById('ready')
     var slide = 0
     var slideInfo = [
@@ -27,7 +27,7 @@
       { class: 'dreams', title: 'Dreams have <span class="space">No Limits</span>'},
     ]
 
-    next.addEventListener('click', function (event) {
+    setInterval(function () {
       slide += 1
       if (slide >= 12) {
         window.scrollTo({top: readySection.offsetTop - 133, behavior: 'smooth'})
@@ -44,6 +44,10 @@
         banner.classList.remove('bghidden')
         headline.classList.remove('titlehidden')
       }, 2000)
+    }, 7000)
+
+    scroll.addEventListener('click', function (event) {
+      window.scrollTo({top: readySection.offsetTop - 133, behavior: 'smooth'})
     })
 
   })

@@ -316,12 +316,12 @@ h1#headline span.space { font-size: 1.45em; }
 h1#headline span.elevator { font-size: .75em; top: -1rem; }
 h1#headline span.company { display: block; font-size: .4em; top: -1rem; right: 3.25em; }
 
-button#next {
+button#scroll {
   position: absolute;
   bottom: 5rem;
   left: 50%;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.1em;
   color: white;
   background: rgba(0,0,0,0.7);
   text-shadow: 1px 1px 2px grey;
@@ -330,17 +330,17 @@ button#next {
   transition: .75s;
 }
 
-button#next:hover,
-button#next:focus {
+button#scroll:hover,
+button#scroll:focus {
   border: 3px solid white;
   background: rgba(255,255,255,0.25);
   color: white;
 }
-button#next:active { color: white; }
+button#scroll:active { color: white; }
 
 @media all and (min-width: 700px) and (min-height: 900px) {
 
-  button#next {
+  button#scroll {
     display: inline-block;
     bottom: 12rem;
     font-size: 1.7em;
@@ -382,7 +382,7 @@ section#banner.launches::after { background: url('/images/rocket-launches.png') 
 h1#headline.launches {
   top: 10%;
 }
-h1#headline span.glorious { font-size: 1.35em; }
+h1#headline span.glorious { font-size: 1.3em; }
 
 
 section#banner.ocean::after { background: url('/images/ocean-elevator.png') center top / cover no-repeat; }
@@ -418,7 +418,7 @@ h1#headline.cost span.cost { font-size: 1.5em; }
 section#banner.package::after { background: url('/images/fedex.png') center bottom / cover no-repeat; }
 h1#headline.package {
   top: 12.5%;
-  font-size: 2.25em;
+  font-size: 2.2em;
   text-align: left;
 }
 h1#headline.package span.smaller {
@@ -436,7 +436,7 @@ h1#headline.operational {
   text-align: left;
 }
 h1#headline.operational span.first {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 h1#headline.operational span.year {
   font-size: 1.7em;
@@ -459,8 +459,8 @@ h1#headline.solar {
   top: 15%;
   text-align: left;
 }
-@media all and (min-width: 480px) { h1#headline.solar { font-size: 2.5em; width: 480px; right: auto; left: 5%; }}
-@media all and (min-width: 700px) { h1#headline.solar { font-size: 3.5em; }}
+@media all and (min-width: 480px) { h1#headline.solar { font-size: 2.3em; width: 480px; right: auto; left: 5%; }}
+@media all and (min-width: 700px) { h1#headline.solar { font-size: 3.3em; }}
 
 
 section#banner.dreams::after { background: url('/images/mars-elevator.png') 55% center / cover no-repeat; }
